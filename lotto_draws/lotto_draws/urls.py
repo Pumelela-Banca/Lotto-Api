@@ -22,9 +22,15 @@ from lotto_draws import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('daily/', views.daily_draws),
+    path('daily/<int:year>-<int:month>-<int:day>/', views.daily_draws),
     path('powerball/', views.powerball_draws),
+    path('powerball/<int:year>-<int:month>-<int:day>/', views.daily_draws),
     path('powerballplus/', views.powerball_plus_draws),
+    path('powerballplus/<int:year>-<int:month>-<int:day>/', views.daily_draws),
     path('lotto/', views.lotto_draws),
+    path('lotto/<int:year>-<int:month>-<int:day>/', views.daily_draws),
     path('lotto1/', views.lotto1_draws),
+    path('lotto1/<int:year>-<int:month>-<int:day>/', views.daily_draws),
     path('lotto2/', views.lotto2_draws),
+    path('lotto2/<int:year>-<int:month>-<int:day>/', views.daily_draws),
 ]
