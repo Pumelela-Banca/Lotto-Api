@@ -22,4 +22,9 @@ import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('daily/', views.daily_draws),
+    path('powerball/', views.powerball_draws),
+    path('powerballplus/', views.powerball_plus_draws),
+    path('lotto/', views.lotto_draws),
+    path('lotto1/', views.lotto1_draws),
+    path('lotto2/', views.lotto2_draws),
 ]
