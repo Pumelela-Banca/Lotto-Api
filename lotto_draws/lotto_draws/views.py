@@ -27,56 +27,81 @@ def all_draws():
 
     return daily, powerball, powerball_plus, lotto, lotto1, lotto2
 
-def daily_draws():
+@api_view(['GET', 'POST'])
+def daily_draws(request_date=None):
     """
     Return the daily draws
     """
-    daily = Daily.objects.all()
+    if request_date:
+        daily = Daily.objects.filter(date=request_date)
+    else:
+        daily = Daily.objects.all()
     serializer = DailySerializer(daily, many=True)
 
     return JsonResponse(serializer.data, safe=False)
 
-def powerball_draws():
+@api_view(['GET', 'POST'])
+def powerball_draws(request_date=None):
     """
     Return the powerball draws
     """
-    powerball = PowerBall.objects.all()
+    if request_date:
+        powerball = PowerBall.objects.filter(date=request_date)
+    else:
+        powerball = PowerBall.objects.all()
     serializer = PowerBallSerializer(powerball, many=True)
 
     return JsonResponse(serializer.data, safe=False)
 
-def powerball_plus_draws():
+@api_view(['GET', 'POST'])
+def powerball_plus_draws(request_date=None):
     """
     Return the powerball plus draws
     """
-    powerball_plus = PowerBallPlus.objects.all()
+    if request_date:
+        powerball_plus = PowerBallPlus.objects.filter(date=request_date)
+    else:
+        powerball_plus = PowerBallPlus.objects.all()
     serializer = PowerBallPlusSerializer(powerball_plus, many=True)
 
     return JsonResponse(serializer.data, safe=False)
 
-def lotto_draws():
+@api_view(['GET', 'POST'])
+def lotto_draws(request_date=None):
     """
     Return the lotto draws
     """
-    lotto = Lotto.objects.all()
+    if request_date:
+        lotto = Lotto.objects.filter(date=request_date)
+    else:
+        lotto = Lotto.objects.all()
     serializer = LottoSerializer(lotto, many=True)
 
     return JsonResponse(serializer.data, safe=False)
 
-def lotto1_draws():
+
+@api_view(['GET', 'POST'])
+def lotto1_draws(request_date=None):
     """
     Return the lotto1 draws
     """
-    lotto1 = Lotto1.objects.all()
+    if request_date:
+        lotto1 = Lotto1.objects.filter(date=request_date)
+    else:
+        lotto1 = Lotto1.objects.all()
     serializer = Lotto1Serializer(lotto1, many=True)
 
     return JsonResponse(serializer.data, safe=False)
 
-def lotto2_draws():
+@api_view(['GET', 'POST'])
+def lotto2_draws(request_date=None):
     """
     Return the lotto2 draws
     """
-    lotto2 = Lotto2.objects.all()
+    if request_date:
+        lotto2 = Lotto2.objects.filter(date=request_date)
+    else:
+        lotto2 = Lotto2.objects.all()
     serializer = Lotto2Serializer(lotto2, many=True)
 
     return JsonResponse(serializer.data, safe=False)
