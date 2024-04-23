@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import views
+from lotto_draws import views
 
 
 urlpatterns = [

@@ -3,11 +3,15 @@ List of views for the lotto_draws app.
 """
 from django.http import JsonResponse
 from rest_framework import viewsets
-from models import (Daily, PowerBall, 
+from lotto_draws.models import (Daily, PowerBall, 
                     PowerBallPlus, Lotto, Lotto1, Lotto2)
-from  serializers import (DailySerializer, PowerBallSerializer, 
+from  lotto_draws.serializers import (DailySerializer, PowerBallSerializer, 
                             PowerBallPlusSerializer, LottoSerializer, 
                             Lotto1Serializer, Lotto2Serializer)
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
 
 
 def all_draws():
@@ -22,7 +26,6 @@ def all_draws():
     lotto2 = Lotto2.objects.all()
 
     return daily, powerball, powerball_plus, lotto, lotto1, lotto2
-
 
 def daily_draws():
     """
