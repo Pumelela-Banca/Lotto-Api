@@ -1,14 +1,8 @@
-Here's a refined description for your Lottery API, along with suggestions for how the documentation might look:
-
----
-
 ### Lottery API (Real-Time Lottery Numbers in Django and FastAPI)
 
-I conceptualized and developed a real-time Lottery API that delivers up-to-date lottery numbers. The service is implemented using Django and FastAPI to ensure robust backend functionality. Additionally, Selenium is leveraged for automated data collection from various lottery sources.
+Real-time Lottery API that delivers up-to-date lottery numbers. The service is implemented using Django and FastAPI to ensure robust backend functionality. Additionally, Selenium is leveraged for automated data collection from various lottery sources.
 
 ---
-
-### Documentation Suggestions
 
 #### Overview
 
@@ -24,7 +18,7 @@ The Lottery API provides real-time access to the latest lottery numbers from var
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/Lottery_API.git
+    git clone https://github.com/Pumelela-Banca/Lotto-Api.git
     ```
 
 #### API Endpoints
